@@ -1,0 +1,133 @@
+* {
+    font-family:'roboto',sans-serif;
+}
+body {
+    margin:auto;
+}
+
+.Title {
+    border-bottom:solid 1px grey;
+    text-align: center;
+}
+h1 {
+    font-family:'shrikhand';
+    margin:10px;
+    font-size:2em;
+    font-weight:normal;
+}
+h2 {
+    margin:0;
+    padding:25px;
+}
+a {
+    text-decoration:none;
+    color:$link-color;
+}
+
+.Locate-Restaurant {
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    background-color :$backgroundcolor_locate;
+    padding:10px;
+    }
+.Order-Menu {
+    text-align: center;
+    background-color: $backgroundcolor ;
+    padding-bottom:40px;
+    &__Title {
+        margin:0;
+        padding:40px;
+        padding-bottom:1px;}
+    &__Button {
+    border-radius:25px;
+    background:linear-gradient(to bottom,#ff79da,#9356DC);
+    width:200px;
+    height:45px;
+    color:white;
+    border:none;
+    margin:20px;
+    } 
+} 
+.Fonction {
+    padding-bottom:60px;
+    &-Button {
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        border:2px solid red;
+        margin-bottom:15px;
+    &__Number {
+        border-radius:50px;
+        background-color: $Number-backgroundcolor;
+        color:$Number-color;
+        padding: 4px 9px;
+        transform:translateX(12px);
+    }
+    &__choice {
+    background-color: $backgroundcolor;
+    border-radius:15px;
+    width:75%; // ou 300px
+    padding:20px;
+    font-size:16px;}
+    &_fa {
+        padding:25px;
+    }
+}
+}
+
+.Presentation p,h3{
+    margin:5px;
+
+}
+.Restaurant {
+    background-color:$backgroundcolor;
+    padding-bottom:40px;
+    &-Card {
+    @include restaurant-card;
+    width:95%;
+    height:270px;
+    background-color: white;
+    border-radius:25px;
+    margin:15px;
+    & img{
+    @include restaurant-card;
+    width:100%;
+    height:200px;
+    object-fit: cover;
+    border-radius:25px 25px 0 0;}
+    }
+}
+.footer {
+    background-color: $backgroundcolor_footer;
+    color:$text-color_footer;
+    font-size:medium;
+    padding-bottom:25px;
+    &-a-decoration {
+        flex:10;
+        color:$text-color_footer;
+    }
+    &-fa {
+        flex:1;
+    }
+    &-title {
+        padding:20px 0 10px 25px;
+        margin:0;
+        font-size:18px;
+    }
+    &-list{
+        list-style: none;
+        margin:0;
+        padding:0 0 0 25px;
+        &_text {
+            display:flex;
+            // gap éventuel nécessaire pour la version desktop ou refaire un flex dimensionné en media queries à voir plus tard
+            align-items: center;
+            padding-bottom:5px;
+            font-weight:bold;
+        }
+        &_text-small {
+            padding-bottom:5px;
+        }
+    }
+}
