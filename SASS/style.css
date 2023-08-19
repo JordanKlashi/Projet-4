@@ -1,0 +1,95 @@
+* {
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  margin: auto;
+}
+
+.Title {
+  border-bottom: solid 1px grey;
+  text-align: center;
+}
+
+h1 {
+  font-family: "shrikhand";
+}
+
+h2 {
+  padding: 5px;
+}
+
+.Locate-Restaurant {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: grey;
+  padding: 10px;
+}
+
+.Order-Menu {
+  text-align: center;
+  background-color: darkgray;
+  padding-bottom: 40px;
+}
+.Order-Menu__Title {
+  margin: 0;
+  padding: 40px;
+  padding-bottom: 1px;
+}
+.Order-Menu__Button {
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #ff79da, #9356DC);
+  width: 200px;
+  height: 45px;
+  color: white;
+}
+
+.Fonction {
+  background-color: white;
+  gap: 20px;
+}
+.Fonction-Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.Fonction-Button__choice {
+  background-color: rgb(75, 74, 74);
+  border-radius: 15px;
+  width: 300px;
+  height: 50px;
+  align-items: center;
+}
+
+.Presentation p, h3 {
+  margin: 5px;
+}
+
+.Restaurant {
+  background-color: grey;
+  padding-bottom: 40px;
+}
+.Restaurant-Card {
+  width: 340px;
+  border-radius: 25px;
+  height: 270px;
+  margin: 15px;
+  background-color: white;
+}
+.Restaurant-Card img {
+  width: 340px;
+  border-radius: 25px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+
+footer {
+  padding-top: 20px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+}/*# sourceMappingURL=style.css.map */
