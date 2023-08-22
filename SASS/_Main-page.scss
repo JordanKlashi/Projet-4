@@ -67,11 +67,17 @@ a {
     &__choice {
     background-color: $backgroundcolor;
     border-radius:15px;
-    width:75%; // ou 300px
+    width:80%; // ou 300px
     padding:20px;
     font-size:16px;}
     &_fa {
-        padding:25px;
+    padding:25px;
+        &_color {
+            color:$color-fa-fonction;
+        }
+        &_shop {
+            color:$color-fa-market;
+        }
     }
 }
 }

@@ -1,0 +1,47 @@
+.presentation-restaurant_img img{
+    object-fit: cover;
+    width:100%;
+    height:250px;
+}
+
+.presentation-restaurant_menu {
+    border-radius:25px ;
+    border:1px solid red;
+    background-color: $backgroundcolor;
+    &_titre {
+        font-family:'shrikhand';
+        font-weight:normal;
+        font-size:21px;
+    }
+    &_commande{
+        border-radius:25px;
+        padding:10px;
+        width:85%;
+        justify-content: center;
+        background-color: $backgroundcolor-boutton_plat;
+        &_descriptif {
+            display:flex;
+            justify-content: space-between;
+            &_txt {
+
+            }
+        }
+    }
+   
+}
+.presentation-restaurant_menu_commande h4,p{
+        padding:0;
+        padding-bottom:5px;
+        margin:0;
+    }
+.presentation-restaurant_menu_Card {
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    gap:15px;
+    align-items: center;
+}
+.boutton_commande {
+    display:flex;
+    justify-content: center;
+}
