@@ -1,3 +1,13 @@
+.Header {
+    display:flex;
+    align-items: center;
+    &_title {
+        
+    }
+    &_Back {
+       flex:1;
+    }
+}
 .presentation-restaurant_img img{
     object-fit: cover;
     width:100%;
@@ -6,24 +16,45 @@
 
 .presentation-restaurant_menu {
     border-radius:25px ;
-    border:1px solid red;
     background-color: $backgroundcolor;
+    transform: translateY(-30px);
+    &_titreflex {
+        display:flex;
+        align-items: center;
+        padding:25px;
+        justify-content: center;
+        gap:30px;
+    }
     &_titre {
         font-family:'shrikhand';
         font-weight:normal;
-        font-size:21px;
+        font-size:26px;
+        padding:0;
+    }
+    &_soustitre {
+        font-size:16px;
+        padding-top:35px;
+        padding-bottom:5px;
+        margin-bottom:10px;
+        position:relative;
+        display:inline-block;
+        font-weight:unset;
     }
     &_commande{
         border-radius:25px;
         padding:10px;
         width:85%;
         justify-content: center;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         background-color: $backgroundcolor-boutton_plat;
         &_descriptif {
             display:flex;
             justify-content: space-between;
             &_txt {
-
+                font-size:0.88em;
+            }
+            &_prix {
+                font-weight:bold;
             }
         }
     }

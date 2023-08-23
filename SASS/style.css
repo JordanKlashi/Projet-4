@@ -6,8 +6,11 @@ body {
   margin: auto;
 }
 
+main {
+  background-color: #f6f6f6;
+}
+
 .Title {
-  border-bottom: solid 1px grey;
   text-align: center;
 }
 
@@ -34,6 +37,7 @@ a {
   gap: 20px;
   background-color: #EAEAEA;
   padding: 10px;
+  box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 .Order-Menu {
@@ -58,12 +62,12 @@ a {
 
 .Fonction {
   padding-bottom: 60px;
+  background-color: white;
 }
 .Fonction-Button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 2px solid red;
   margin-bottom: 15px;
 }
 .Fonction-Button__Number {
@@ -76,8 +80,8 @@ a {
 .Fonction-Button__choice {
   background-color: #f6f6f6;
   border-radius: 15px;
-  width: 80%;
-  padding: 20px;
+  width: 75%;
+  padding: 25px;
   font-size: 16px;
 }
 .Fonction-Button_fa {
@@ -95,15 +99,19 @@ a {
 }
 
 .Restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f6f6f6;
   padding-bottom: 40px;
 }
 .Restaurant-Card {
-  width: 95%;
+  align-items: center;
+  width: 92%;
   height: 270px;
   background-color: white;
   border-radius: 25px;
-  margin: 15px;
+  margin: 10px;
 }
 .Restaurant-Card img {
   width: 100%;
@@ -111,6 +119,17 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 25px 25px 0 0;
+}
+.Restaurant-Card_Descriptif {
+  display: flex;
+  align-items: center;
+}
+.Restaurant-Card_Txt {
+  flex: 1;
+  padding-left: 15px;
+}
+.Restaurant-Card_Fa {
+  padding-right: 30px;
 }
 
 .footer {
@@ -146,6 +165,14 @@ a {
   padding-bottom: 5px;
 }
 
+.Header {
+  display: flex;
+  align-items: center;
+}
+.Header_Back {
+  flex: 1;
+}
+
 .presentation-restaurant_img img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -155,25 +182,50 @@ a {
 
 .presentation-restaurant_menu {
   border-radius: 25px;
-  border: 1px solid red;
   background-color: #f6f6f6;
+  transform: translateY(-30px);
+}
+.presentation-restaurant_menu_titreflex {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  justify-content: center;
+  gap: 30px;
 }
 .presentation-restaurant_menu_titre {
   font-family: "shrikhand";
   font-weight: normal;
-  font-size: 21px;
+  font-size: 26px;
+  padding: 0;
+}
+.presentation-restaurant_menu_soustitre {
+  font-size: 16px;
+  padding-top: 35px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  font-weight: unset;
 }
 .presentation-restaurant_menu_commande {
   border-radius: 25px;
   padding: 10px;
   width: 85%;
   justify-content: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 .presentation-restaurant_menu_commande_descriptif {
   display: flex;
   justify-content: space-between;
 }
+.presentation-restaurant_menu_commande_descriptif_txt {
+  font-size: 0.88em;
+}
+.presentation-restaurant_menu_commande_descriptif_prix {
+  font-weight: bold;
+}
+
 .presentation-restaurant_menu_commande h4, p {
   padding: 0;
   padding-bottom: 5px;
@@ -191,4 +243,14 @@ a {
 .boutton_commande {
   display: flex;
   justify-content: center;
+}
+
+.presentation-restaurant_menu_soustitre::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #99E2D0;
 }/*# sourceMappingURL=style.css.map */
