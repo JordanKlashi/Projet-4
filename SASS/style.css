@@ -26,6 +26,21 @@ h2 {
   padding: 25px;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -60,9 +75,14 @@ a {
   margin: 20px;
 }
 
-.Fonction {
-  padding-bottom: 60px;
+#Fonction {
   background-color: white;
+  padding-bottom: 60px;
+}
+
+.Fonction {
+  display: flex;
+  flex-direction: column;
 }
 .Fonction-Button {
   display: flex;
@@ -78,11 +98,13 @@ a {
   transform: translateX(12px);
 }
 .Fonction-Button__choice {
+  display: flex;
+  align-items: center;
   background-color: #f6f6f6;
   border-radius: 15px;
-  width: 75%;
-  padding: 25px;
-  font-size: 16px;
+  width: 300px;
+  padding: 5px;
+  font-size: 12px;
 }
 .Fonction-Button_fa {
   padding: 25px;
@@ -94,7 +116,7 @@ a {
   color: #9356DC;
 }
 
-.Presentation p, h3 {
+.Presentation p, h4 {
   margin: 5px;
 }
 
@@ -169,8 +191,17 @@ a {
   display: flex;
   align-items: center;
 }
+.Header_title {
+  font-family: "shrikhand";
+  margin: 10px;
+  font-size: 2em;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+}
 .Header_Back {
-  flex: 1;
+  position: absolute;
+  padding-left: 25px;
 }
 
 .presentation-restaurant_img img {
@@ -253,4 +284,78 @@ a {
   width: 40px;
   height: 1px;
   background-color: #99E2D0;
+}
+
+.presentation-restaurant_menu_commande {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  position: relative;
+}
+
+.animation {
+  width: 0;
+  height: 100%;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: width 0.3s ease-in-out;
+  transition-delay: 0s, 0.2s;
+}
+
+.presentation-restaurant_menu_commande_descriptif_prix {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(20%);
+}
+
+.presentation-restaurant_menu_commande:active .animation {
+  overflow: hidden;
+  width: 15%;
+  background-color: aquamarine;
+  transform: scale(1);
+}
+
+.symbole {
+  font-size: 24px;
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 30px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+}
+
+.presentation-restaurant_menu_commande:active .symbole {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.Restaurant-Card_Fa {
+  position: relative;
+  display: flex;
+}
+
+.Restaurant-Card_Fa_empty {
+  z-index: 1;
+  position: relative;
+  background-clip: content-box;
+  transition: transform 1000ms;
+  transform: scale(1);
+}
+.Restaurant-Card_Fa_empty:hover {
+  transform: scale(0);
+}
+
+.Restaurant-Card_Fa_animation {
+  position: absolute;
+  transition: transform 1000ms;
+  opacity: 0;
+}
+.Restaurant-Card_Fa_animation:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.Fonction-Button__choice:hover {
+  background-clip: #9356DC;
 }/*# sourceMappingURL=style.css.map */

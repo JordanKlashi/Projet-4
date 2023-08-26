@@ -20,6 +20,18 @@ h2 {
     margin:0;
     padding:25px;
 }
+h3 {
+    margin:0;
+    padding:0;
+}
+h4 {
+    margin:0;
+    padding:0;
+}
+p {
+    margin:0;
+    padding:0;
+}
 a {
     text-decoration:none;
     color:$link-color;
@@ -51,9 +63,13 @@ a {
     margin:20px;
     } 
 } 
-.Fonction {
-    padding-bottom:60px;
+#Fonction {
     background-color: $Number-color;
+    padding-bottom:60px;
+}
+.Fonction {
+    display:flex;
+    flex-direction:column;
     &-Button {
         display:flex;
         flex-direction: row;
@@ -67,11 +83,13 @@ a {
         transform:translateX(12px);
     }
     &__choice {
+    display:flex;
+    align-items: center;
     background-color: $backgroundcolor;
     border-radius:15px;
-    width:75%; // ou 300px
-    padding:25px;
-    font-size:16px;}
+    width:300px;
+    padding:5px;
+    font-size:12px;}
     &_fa {
     padding:25px;
         &_color {
@@ -84,7 +102,7 @@ a {
 }
 }
 
-.Presentation p,h3{
+.Presentation p,h4{
     margin:5px;
 
 }

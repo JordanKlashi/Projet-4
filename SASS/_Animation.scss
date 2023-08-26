@@ -1,0 +1,87 @@
+.presentation-restaurant_menu_soustitre::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: $surlined-color;
+}
+
+.presentation-restaurant_menu_commande {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animation {
+    width: 0;
+    height: 100%;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width 0.3s ease-in-out;
+    transition-delay: 0s, 0.2s;
+  }
+  .presentation-restaurant_menu_commande_descriptif_prix {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(20%);
+  }
+  .presentation-restaurant_menu_commande:active .animation {
+    overflow:hidden;
+    width: 15%;
+    background-color: aquamarine;
+    transform:scale(1);
+    
+  }
+  
+  .symbole {
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    top:32px;
+    left:30px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+  }
+  
+  .presentation-restaurant_menu_commande:active .symbole {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+
+
+
+.Restaurant-Card_Fa {
+  position:relative;
+  display:flex;
+}
+.Restaurant-Card_Fa_empty {
+  z-index: 1;
+  position: relative;
+  background-clip: content-box;
+  transition: transform 1000ms;
+  transform: scale(1);
+  
+  &:hover {
+    transform: scale(0);
+  }
+}
+.Restaurant-Card_Fa_animation {
+  position: absolute;
+  transition:transform 1000ms;
+  opacity: 0; 
+  
+  &:hover {
+    opacity: 1; 
+    transform: scale(1);
+  }
+}
+
+
+.Fonction-Button__choice:hover {
+  // background-color: ;
+  background-clip: $color-fa-market;
+}
