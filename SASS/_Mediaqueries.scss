@@ -1,0 +1,83 @@
+@media only screen and (min-width: 768px) {
+    .body-content {
+        width:100%;
+    }
+
+    .Order-Menu__Title {
+        margin-bottom:20px;
+    }
+    
+    .Presentation {
+        width:100%;
+        align-items: center;
+    }
+    .Restaurant-Title {
+        padding-left:60px;
+    }
+    .Restaurant-Card{
+       width:44%;
+       box-sizing: border-box;
+       justify-content: center;
+
+    }
+    .Restaurant {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        gap:5%;
+        padding-left:50px;
+    }
+
+
+
+      ////////////////////////// Restaurant //////////////////////////
+   
+
+      
+}
+
+@media only screen and (min-width:1040px)  {
+    #Fonction {
+        padding-left:35px;
+    }
+    .Fonction {
+        flex-direction:row;
+        justify-content: flex-start;
+        gap:30px;
+    }
+    .Fonction-Button__choice {
+        
+    }
+    .footer {
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top:30px;
+        width:100%;
+        justify-content: flex-end;
+        gap:10px;
+        &-list {
+            display:flex;
+            flex-direction: row;
+            width:100%;
+            &_text {
+                width:20%;
+            }
+        }
+    }
+
+
+    ////////////////////////// Restaurant //////////////////////////
+    
+    body {
+        max-width: 1450px;
+    }
+    .presentation-restaurant_menu {
+        margin-left:250px;
+        margin-right:250px;
+    }
+    .footer {
+        transform:translateY(-30px);
+    }
+}

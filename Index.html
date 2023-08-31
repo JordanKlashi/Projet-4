@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,18 @@
     <link rel="stylesheet" href="SASS/style.css" />
     <title>ohmyfood</title>
   </head>
-  <body>
+<body>
+  <div class="container">
+    <div class="txt">
+      <h1>Loading...</h1>
+    </div>
+    <div class="loading">
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="body-content">
     <header>
       <nav class="Title">
         <h1>ohmyfood</h1>
@@ -44,7 +55,7 @@
 
         <a href="#Restaurant"><button class="Order-Menu__Button">Explorez nos restaurants</button></a>
       </div>
-
+      
       <section id="Fonction">
         <h2>Fonctionnement</h2>
         <div class="Fonction">
@@ -75,7 +86,7 @@
        </div> 
       </section>
       <section class="Presentation">
-        <h2>Restaurants</h2>
+        <h2 class="Restaurant-Title">Restaurants</h2>
         <div id="Restaurant" class="Restaurant">
           
           <div class="Restaurant-Card">
@@ -167,7 +178,9 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer-title">ohmyfood</p>
+      <div class="footer-title">
+      <p>ohmyfood</p>
+      </div>
       <ul class="footer-list">
         <li class="footer-list_text">
           <span class="footer-fa"><i class="fa-solid fa-utensils"></i></span
@@ -186,5 +199,6 @@
         </li>
       </ul>
     </footer>
-  </body>
+  </div>
+</body>
 </html>

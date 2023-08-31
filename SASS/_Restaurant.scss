@@ -14,6 +14,9 @@
     padding-left:25px;
     }
 }
+main {
+    background-color: $White;
+}
 .presentation-restaurant_img img{
     object-fit: cover;
     width:100%;
@@ -21,8 +24,8 @@
 }
 
 .presentation-restaurant_menu {
-    border-radius:25px ;
-    background-color: $backgroundcolor;
+    border-radius:25px 25px 0 0 ;
+    background-color: $backgroundcolorPrimary;
     transform: translateY(-30px);
     &_titreflex {
         display:flex;
@@ -52,7 +55,7 @@
         width:85%;
         justify-content: center;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        background-color: $backgroundcolor-boutton_plat;
+        background-color: $White;
         &_descriptif {
             display:flex;
             justify-content: space-between;
@@ -81,4 +84,8 @@
 .boutton_commande {
     display:flex;
     justify-content: center;
+}
+
+.fa-solid .fa-circle-check {
+    color:$Tertiary;
 }

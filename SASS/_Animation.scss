@@ -1,3 +1,88 @@
+.loading-bar {
+  width: 80%;
+  height: 33px;
+  background-color: $Tertiary; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.5s ease; 
+}
+          Progress bar loading website
+.container {
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  transform:translateX(0);
+  animation:loading;
+
+}
+
+.txt {
+  margin-bottom:25px;
+  font-size:20px;
+  letter-spacing:2px;
+  
+}
+.loading {
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+ 
+}
+.loading .line-box {
+  padding:2px;
+  width:40%;
+  height:20px;
+  border:2px solid $Black;
+  border-radius:20px;
+}
+.loading .line-box .line{
+  height:20px;
+  border-radius:20px;
+  background:$Tertiary;
+  animation: loading 1s forwards cubic-bezier(.9,0,.1,1);
+  animation-delay:0s;
+  z-index: -1;
+  transform:translateX(-99999px);
+}
+
+@keyframes loading {
+  0%{
+    width:0%;
+    transform:translateX(0px);
+  }
+    
+  100%{
+    width:100%;
+    transform:translateX(-99999px);
+  }
+}
+
+.body-content {
+  position:absolute;
+  overflow:hidden;
+  z-index: 1;
+  animation: body 0ms 1s both;
+  transform:translateX(0px);
+
+}
+
+@keyframes body {
+  0% {
+    transform : translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+        // surlined green Menu
+
 .presentation-restaurant_menu_soustitre::after {
     content: "";
     position: absolute;
@@ -5,38 +90,34 @@
     left: 0;
     width: 40px;
     height: 1px;
-    background-color: $surlined-color;
+    background-color: $Tertiary;
 }
+
+          // Animation select order
 
 .presentation-restaurant_menu_commande {
     border: 1px solid #ccc;
     overflow: hidden;
     position: relative;
   }
-  
-  .animation {
+  .presentation-restaurant_menu_commande_animation {
     width: 0;
     height: 100%;
-    background-color: #f0f0f0;
     position: absolute;
     top: 0;
     right: 0;
-    transition: width 0.3s ease-in-out;
-    transition-delay: 0s, 0.2s;
+    transition: width 0.5s ease-in-out;
   }
-  .presentation-restaurant_menu_commande_descriptif_prix {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(20%);
+  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_descriptif_prix {
+    transform: translateX(-60px);
   }
-  .presentation-restaurant_menu_commande:active .animation {
+  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_animation {
     overflow:hidden;
-    width: 15%;
-    background-color: aquamarine;
+    width: 60px;
+    background-color: $Tertiary;
     transform:scale(1);
-    
   }
-  
-  .symbole {
+  .presentation-restaurant_menu_commande_symbole {
     font-size: 24px;
     display: block;
     position: absolute;
@@ -45,14 +126,23 @@
     transform: translate(-50%, -50%) rotate(0deg);
     transition: transform 0.5s ease-in-out;
     align-items: center;
-  }
-  
-  .presentation-restaurant_menu_commande:active .symbole {
+  } 
+  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_symbole {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+  .presentation-restaurant_menu_commande_descriptif_txt {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    transition: max-width 0.1s ease-in-out;
+    max-width: 100%; 
+  }
+  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_descriptif_txt {
+    max-width: 70%;
+  }
 
 
-
+            // Animation Heart 
 
 .Restaurant-Card_Fa {
   position:relative;
@@ -80,8 +170,9 @@
   }
 }
 
+              // Background color hover Fonction choice
 
 .Fonction-Button__choice:hover {
   // background-color: ;
-  background-clip: $color-fa-market;
+  background-clip: $Primary;
 }

@@ -1,12 +1,20 @@
-$backgroundcolor_locate:#EAEAEA;
-$backgroundcolor : #f6f6f6;
-$backgroundcolor_footer: #353535;
-$text-color_footer:white;
-$Number-backgroundcolor:#9356DC;
-$Number-color:white;
-$link-color:black;
-$color-fa-market:#9356DC;
+// Color 
+
+$Primary : #9356DC;
+$Secondary : #FF79DA;
+$Tertiary : #99E2D0;
+
+$White:white;
+$Black:black;
+
+// background color 
+
+$backgroundcolorPrimary: #f6f6f6;
+$backgroundcolorSecondary:#EAEAEA;
+$backgroundcolorTertiary:#353535;
+
 $color-fa-fonction:#7E7E7E;
-$backgroundcolor-boutton_plat:white;
-$surlined-color:#99E2D0;
+
+// Linear-gradient
+
 $linear-button:linear-gradient(to bottom,#ff79da,#9356DC);

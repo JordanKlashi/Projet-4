@@ -4,8 +4,11 @@
 body {
     margin:auto;
 }
+.body-content {
+    width:100%;
+}
 main {
-    background-color:$backgroundcolor;
+    background-color:$backgroundcolorPrimary;
 }
 .Title {
     text-align: center;
@@ -34,20 +37,20 @@ p {
 }
 a {
     text-decoration:none;
-    color:$link-color;
+    color:$Black;
 }
 
 .Locate-Restaurant {
     display:flex;
     justify-content: center;
     gap:20px;
-    background-color :$backgroundcolor_locate;
+    background-color :$backgroundcolorSecondary;
     padding:10px;
     box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
     }
 .Order-Menu {
     text-align: center;
-    background-color: $backgroundcolor ;
+    background-color: $backgroundcolorPrimary ;
     padding-bottom:40px;
     &__Title {
         margin:0;
@@ -58,13 +61,13 @@ a {
     background:$linear-button;
     width:200px;
     height:45px;
-    color:white;
+    color:$White;
     border:none;
     margin:20px;
     } 
 } 
 #Fonction {
-    background-color: $Number-color;
+    background-color: $White;
     padding-bottom:60px;
 }
 .Fonction {
@@ -77,15 +80,15 @@ a {
         margin-bottom:15px;
     &__Number {
         border-radius:50px;
-        background-color: $Number-backgroundcolor;
-        color:$Number-color;
+        background-color: $Primary;
+        color:$White;
         padding: 4px 9px;
         transform:translateX(12px);
     }
     &__choice {
     display:flex;
     align-items: center;
-    background-color: $backgroundcolor;
+    background-color: $backgroundcolorPrimary;
     border-radius:15px;
     width:300px;
     padding:5px;
@@ -94,9 +97,6 @@ a {
     padding:25px;
         &_color {
             color:$color-fa-fonction;
-        }
-        &_shop {
-            color:$color-fa-market;
         }
     }
 }
@@ -111,14 +111,14 @@ a {
     display:flex;
     flex-direction:column;
     align-items: center;
-    background-color:$backgroundcolor;
+    background-color:$backgroundcolorPrimary;
     padding-bottom:40px;
     &-Card {   
     @include restaurant-card;
     align-items: center;
     width:92%;
     height:270px;
-    background-color: white;
+    background-color: $White;
     border-radius:25px;
     margin:10px;
     & img{
@@ -142,13 +142,13 @@ a {
   }
 }
 .footer {
-    background-color: $backgroundcolor_footer;
-    color:$text-color_footer;
+    background-color: $backgroundcolorTertiary;
+    color:$White;
     font-size:medium;
     padding-bottom:25px;
     &-a-decoration {
         flex:10;
-        color:$text-color_footer;
+        color:$White;
     }
     &-fa {
         flex:1;
@@ -161,7 +161,7 @@ a {
     &-list{
         list-style: none;
         margin:0;
-        padding:0 0 0 25px;
+        padding:0 0 0 25px;;
         &_text {
             display:flex;
             // gap éventuel nécessaire pour la version desktop ou refaire un flex dimensionné en media queries à voir plus tard
