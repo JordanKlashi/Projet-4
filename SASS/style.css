@@ -6,10 +6,6 @@ body {
   margin: auto;
 }
 
-.body-content {
-  width: 100%;
-}
-
 main {
   background-color: #f6f6f6;
 }
@@ -54,7 +50,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #EAEAEA;
+  background-color: #353535;
   padding: 10px;
   box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
@@ -155,8 +151,12 @@ a {
   padding-right: 30px;
 }
 
+.Restaurant-Card_Fa_animation i {
+  color: #9356DC;
+}
+
 .footer {
-  background-color: #353535;
+  background-color: #EAEAEA;
   color: white;
   font-size: medium;
   padding-bottom: 25px;
@@ -214,12 +214,14 @@ main {
      object-fit: cover;
   width: 100%;
   height: 250px;
+  z-index: 1;
 }
 
 .presentation-restaurant_menu {
+  z-index: 10;
   border-radius: 25px 25px 0 0;
   background-color: #f6f6f6;
-  transform: translateY(-30px);
+  margin-top: -35px;
 }
 .presentation-restaurant_menu_titreflex {
   display: flex;
@@ -285,6 +287,16 @@ main {
   color: #99E2D0;
 }
 
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 .loading-bar {
   width: 80%;
   height: 33px;
@@ -295,15 +307,17 @@ main {
   transition: width 0.5s ease;
 }
 
-Progress bar loading website .container {
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translateX(0);
-  animation: loading;
+  animation: loading 5s 2s ease-out;
 }
 
 .txt {
@@ -338,30 +352,19 @@ Progress bar loading website .container {
   transform: translateX(-99999px);
 }
 
-@keyframes loading {
-  0% {
-    width: 0%;
-    transform: translateX(0px);
-  }
-  100% {
-    width: 100%;
-    transform: translateX(-99999px);
-  }
-}
 .body-content {
   position: absolute;
   overflow: hidden;
   z-index: 1;
-  animation: body 0ms 1s both;
-  transform: translateX(0px);
+  animation: body 5s ease-in;
 }
 
 @keyframes body {
   0% {
-    transform: translateX(-9999px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 .presentation-restaurant_menu_soustitre::after {
@@ -430,31 +433,27 @@ Progress bar loading website .container {
 .Restaurant-Card_Fa {
   position: relative;
   display: flex;
+  padding: 5px;
+  border: 1px solid red;
+  cursor: pointer;
 }
-
-.Restaurant-Card_Fa_empty {
-  z-index: 1;
-  position: relative;
-  background-clip: content-box;
-  transition: transform 1000ms;
-  transform: scale(1);
-}
-.Restaurant-Card_Fa_empty:hover {
+.Restaurant-Card_Fa:hover .Restaurant-Card_Fa_empty i {
   transform: scale(0);
-}
-
-.Restaurant-Card_Fa_animation {
-  position: absolute;
   transition: transform 1000ms;
-  opacity: 0;
 }
-.Restaurant-Card_Fa_animation:hover {
-  opacity: 1;
+.Restaurant-Card_Fa:hover .Restaurant-Card_Fa_animation i {
   transform: scale(1);
+  transition: transform 1000ms;
 }
 
-.Fonction-Button__choice:hover {
-  background-clip: #9356DC;
+.Restaurant-Card_Fa_animation i {
+  transform: scale(0);
+  margin-left: -24px;
+  margin-bottom: -44px;
+}
+
+.Fonction-Button__choice:hover i {
+  color: #9356DC;
 }
 
 @media only screen and (min-width: 768px) {
@@ -517,8 +516,5 @@ Progress bar loading website .container {
   .presentation-restaurant_menu {
     margin-left: 250px;
     margin-right: 250px;
-  }
-  .footer {
-    transform: translateY(-30px);
   }
 }/*# sourceMappingURL=style.css.map */

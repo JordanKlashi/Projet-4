@@ -1,3 +1,14 @@
+@keyframes loading {
+  0%{
+    opacity:1;
+    z-index: 10;
+  }
+    
+  100%{
+    opacity:0;
+    z-index: -1;
+  }
+}  
 .loading-bar {
   width: 80%;
   height: 33px;
@@ -7,19 +18,19 @@
   left: 0;
   transition: width 0.5s ease; 
 }
-          Progress bar loading website
 .container {
+  position:fixed;
+  top:0;
+  left:0;
   width:100%;
-  min-height:100vh;
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  transform:translateX(0);
-  animation:loading;
+  animation:loading 5s 2s ease-out ;
 
 }
-
 .txt {
   margin-bottom:25px;
   font-size:20px;
@@ -41,7 +52,7 @@
   border:2px solid $Black;
   border-radius:20px;
 }
-.loading .line-box .line{
+.loading .line-box .line {
   height:20px;
   border-radius:20px;
   background:$Tertiary;
@@ -51,35 +62,25 @@
   transform:translateX(-99999px);
 }
 
-@keyframes loading {
-  0%{
-    width:0%;
-    transform:translateX(0px);
-  }
-    
-  100%{
-    width:100%;
-    transform:translateX(-99999px);
-  }
-}
+
+
 
 .body-content {
   position:absolute;
   overflow:hidden;
   z-index: 1;
-  animation: body 0ms 1s both;
-  transform:translateX(0px);
-
-}
+  animation: body 5s ease-in
+  }
 
 @keyframes body {
   0% {
-    transform : translateX(-9999px);
+    opacity:0;
   }
   100% {
-    transform: translateX(0);
+    opacity:1;
   }
 }
+
 
         // surlined green Menu
 
@@ -147,32 +148,26 @@
 .Restaurant-Card_Fa {
   position:relative;
   display:flex;
-}
-.Restaurant-Card_Fa_empty {
-  z-index: 1;
-  position: relative;
-  background-clip: content-box;
-  transition: transform 1000ms;
-  transform: scale(1);
-  
-  &:hover {
-    transform: scale(0);
-  }
-}
-.Restaurant-Card_Fa_animation {
-  position: absolute;
-  transition:transform 1000ms;
-  opacity: 0; 
-  
-  &:hover {
-    opacity: 1; 
-    transform: scale(1);
-  }
-}
+  padding:5px;
+  border:1px solid red;
+  cursor: pointer;
 
+  &:hover .Restaurant-Card_Fa_empty i {
+  transform: scale(0);
+  transition:transform 1000ms;
+ }
+  &:hover .Restaurant-Card_Fa_animation i {
+  transform: scale(1);
+  transition:transform 1000ms;}
+ 
+}
+.Restaurant-Card_Fa_animation i{
+  transform:scale(0); 
+  margin-left:-24px;
+  margin-bottom:-44px;
+  }
               // Background color hover Fonction choice
 
-.Fonction-Button__choice:hover {
-  // background-color: ;
-  background-clip: $Primary;
+.Fonction-Button__choice:hover i{
+  color:$Primary;
 }
