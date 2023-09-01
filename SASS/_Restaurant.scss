@@ -21,11 +21,9 @@ main {
     object-fit: cover;
     width:100%;
     height:250px;
-    z-index: 1;
 }
 
 .presentation-restaurant_menu {
-    z-index: 10;
     border-radius:25px 25px 0 0 ;
     background-color: $backgroundcolorPrimary;
     margin-top:-35px;
