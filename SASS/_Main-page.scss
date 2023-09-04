@@ -4,6 +4,9 @@
 body {
     margin:auto;
 }
+.body-content {
+    width:100%;
+}
 main {
     background-color:$backgroundcolorPrimary;
 }
@@ -41,7 +44,7 @@ a {
     display:flex;
     justify-content: center;
     gap:20px;
-    background-color :$backgroundcolorTertiary;
+    background-color :$backgroundcolorSecondary;
     padding:10px;
     box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
     }
@@ -51,8 +54,10 @@ a {
     padding-bottom:40px;
     &__Title {
         margin:0;
+        margin-bottom:20px;
         padding:40px;
-        padding-bottom:1px;}
+        padding-bottom:1px;
+    }
     &__Button {
     border-radius:25px;
     background:$linear-button;
@@ -87,7 +92,7 @@ a {
     align-items: center;
     background-color: $backgroundcolorPrimary;
     border-radius:15px;
-    width:300px;
+    width:90%;
     padding:5px;
     font-size:12px;}
     &_fa {
@@ -101,30 +106,37 @@ a {
 
 .Presentation p,h4{
     margin:5px;
-
 }
-
+.Presentation {
+    background-color: $backgroundcolorPrimary;
+}
 .Restaurant {
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    background-color:$backgroundcolorPrimary;
     padding-bottom:40px;
-    &-Card {   
-    @include restaurant-card;
+    &-Title {
+        background-color: $backgroundcolorPrimary;
+    }
+    &-Card { 
+    position:relative;
     align-items: center;
-    width:92%;
     height:270px;
     background-color: white;
     border-radius:25px;
     margin:10px;
+    &_Nouveau {
+        font-weight: bold;
+        padding:5px;
+        background-color: $Tertiary;
+        color:darken($Tertiary, 40%);
+        position:absolute;
+        display:flex;
+        top:5%;
+        left:80%;
+    }
     & img{
-    @include restaurant-card;
     width:100%;
     height:200px;
     object-fit: cover;
     border-radius:25px 25px 0 0;}
-
     &_Descriptif {
         display:flex;
         align-items: center;
@@ -134,15 +146,15 @@ a {
         padding-left:15px;
     }
     &_Fa {
-        padding-right:30px;
-            }
+        margin-right:30px;
+        &_animation i{
+            color:$Primary;
+        }
+    }
   }
 }
-.Restaurant-Card_Fa_animation i{
-    color:$Primary;
-  }
 .footer {
-    background-color: $backgroundcolorSecondary;
+    background-color: $backgroundcolorTertiary;
     color:$White;
     font-size:medium;
     padding-bottom:25px;
@@ -154,6 +166,8 @@ a {
         flex:1;
     }
     &-title {
+        font-family:'shrikhand' ;
+        font-weight: normal;
         padding:20px 0 10px 25px;
         margin:0;
         font-size:18px;

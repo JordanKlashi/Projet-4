@@ -1,172 +1,202 @@
 @keyframes loading {
-  0%{
-    opacity:1;
+  0% {
+    opacity: 1;
     z-index: 10;
   }
-    
-  100%{
-    opacity:0;
+
+  100% {
+    opacity: 0;
     z-index: -1;
   }
-}  
-.loading-bar {
-  width: 80%;
-  height: 33px;
-  background-color: $Tertiary; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: width 0.5s ease; 
 }
-.container {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  animation:loading 5s 2s ease-out ;
 
+@keyframes loading-line {
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 100%;
+  }
 }
-.txt {
-  margin-bottom:25px;
-  font-size:20px;
-  letter-spacing:2px;
-  
-}
+
 .loading {
-  width:100%;
-  height:auto;
-  display:flex;
-  justify-content:center;
-  align-items:center;
- 
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-bar {
+    width: 80%;
+    height: 33px;
+    background-color: $Tertiary;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &-website {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: loading 5s 2s;
+  }
+  &-txt {
+    margin-bottom: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
 }
 .loading .line-box {
-  padding:2px;
-  width:40%;
-  height:20px;
-  border:2px solid $Black;
-  border-radius:20px;
+  padding: 2px;
+  width: 40%;
+  height: 20px;
+  border: 2px solid $Black;
+  border-radius: 20px;
 }
 .loading .line-box .line {
-  height:20px;
-  border-radius:20px;
-  background:$Tertiary;
-  animation: loading 1s forwards cubic-bezier(.9,0,.1,1);
-  animation-delay:0s;
-  z-index: -1;
-  transform:translateX(-99999px);
+  height: 20px;
+  border-radius: 20px;
+  background: $linear-button;
+  animation: loading-line 6s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
-
-
-
-.body-content {
-  position:absolute;
-  overflow:hidden;
-  z-index: 1;
-  animation: body 5s ease-in
-  }
-
-@keyframes body {
+@keyframes website {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
+.body-content {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  animation: website 5s ease-in;
+}
 
-        // surlined green Menu
+// surlined green Menu
 
 .presentation-restaurant_menu_soustitre::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 1px;
-    background-color: $Tertiary;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: $Tertiary;
 }
 
-          // Animation select order
-
+// Animation select order
 .presentation-restaurant_menu_commande {
-    border: 1px solid #ccc;
-    overflow: hidden;
-    position: relative;
-  }
-  .presentation-restaurant_menu_commande_animation {
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: width 0.5s ease-in-out;
-  }
-  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_descriptif_prix {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s ease-in-out, max-width 0.1s ease-in-out;
+}
+
+.presentation-restaurant_menu_commande_animation {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $Tertiary;
+  transform: scale(1);
+  transition: width 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.presentation-restaurant_menu_commande_descriptif_prix {
+  transform: translateX(0);
+  transition:transform 1s ease-in-out;
+}
+
+.presentation-restaurant_menu_commande_symbole {
+  font-size: 24px;
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 30px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 1s ease-in-out;
+  align-items: center;
+}
+
+.presentation-restaurant_menu_commande:hover {
+  .presentation-restaurant_menu_commande_descriptif_prix {
     transform: translateX(-60px);
+    transition:transform 1s ease-in-out;
   }
-  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_animation {
-    overflow:hidden;
+
+  .presentation-restaurant_menu_commande_animation {
     width: 60px;
-    background-color: $Tertiary;
-    transform:scale(1);
+    transform: scale(1) translate(0);
   }
+
   .presentation-restaurant_menu_commande_symbole {
-    font-size: 24px;
-    display: block;
-    position: absolute;
-    top:32px;
-    left:30px;
-    transform: translate(-50%, -50%) rotate(0deg);
-    transition: transform 0.5s ease-in-out;
-    align-items: center;
-  } 
-  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_symbole {
     transform: translate(-50%, -50%) rotate(360deg);
+    transition: transform 1s ease-in-out;
   }
+
   .presentation-restaurant_menu_commande_descriptif_txt {
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-    transition: max-width 0.1s ease-in-out;
-    max-width: 100%; 
-  }
-  .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_descriptif_txt {
     max-width: 70%;
   }
+}
 
-
-            // Animation Heart 
+// Animation Heart
 
 .Restaurant-Card_Fa {
-  position:relative;
-  display:flex;
-  padding:5px;
+  position: relative;
+  display: flex;
+  padding: 5px;
   cursor: pointer;
 
   &:hover .Restaurant-Card_Fa_empty i {
-  transform: scale(0);
-  transition:transform 1000ms;
- }
-  &:hover .Restaurant-Card_Fa_animation i {
-  transform: scale(1);
-  transition:transform 1000ms;}
- 
-}
-.Restaurant-Card_Fa_animation i{
-  transform:scale(0); 
-  margin-left:-24px;
-  margin-bottom:-44px;
+    transform: scale(0);
+    transition: transform 1000ms;
   }
-              // Background color hover Fonction choice
-
-.Fonction-Button__choice:hover i{
-  color:$Primary;
+  &:hover .Restaurant-Card_Fa_animation i {
+    transform: scale(1);
+    transition: transform 1000ms;
+  }
 }
+.Restaurant-Card_Fa_animation i {
+  transform: scale(0);
+  margin-left: -24px;
+  margin-bottom: -44px;
+}
+// Background color hover Fonction choice
+
+.Fonction-Button__choice:hover i {
+  color: $Primary;
+}
+
+// Fa heart try 
+
+// .presentation-restaurant_menu_titrefa {
+//   padding:5px;
+//   border:1px red solid;
+//   position:relative;
+// }
+// .presentation-restaurant_menu_titrefa:hover .fa-regular{
+//   transform: scale(0);
+//   transition:1s;
+// }
+// .presentation-restaurant_menu_titrefa:hover .fa-solid{
+//   transform:scale(1);
+//   transition:1s;
+// }
+// .fa-solid{
+//   color:$Primary;
+//   z-index: 0;
+//   transform:scale(0);
+// }
+// .fa-regular{
+//   z-index: 10;  
+// }
