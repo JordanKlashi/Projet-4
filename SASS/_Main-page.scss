@@ -75,11 +75,13 @@ a {
 .Fonction {
     display:flex;
     flex-direction:column;
+    margin-right:5px;
     &-Button {
         display:flex;
         flex-direction: row;
         align-items:center;
         margin-bottom:15px;
+        
     &__Number {
         border-radius:50px;
         background-color: $Primary;
@@ -92,7 +94,7 @@ a {
     align-items: center;
     background-color: $backgroundcolorPrimary;
     border-radius:15px;
-    width:90%;
+    width:100%;
     padding:5px;
     font-size:12px;}
     &_fa {
@@ -130,7 +132,7 @@ a {
         position:absolute;
         display:flex;
         top:5%;
-        left:80%;
+        left:70%;
     }
     & img{
     width:100%;
@@ -159,11 +161,9 @@ a {
     font-size:medium;
     padding-bottom:25px;
     &-a-decoration {
-        flex:10;
         color:$White;
     }
     &-fa {
-        flex:1;
     }
     &-title {
         font-family:'shrikhand' ;
@@ -178,6 +178,7 @@ a {
         padding:0 0 0 25px;
         &_text {
             display:flex;
+            gap:10px;
             // gap éventuel nécessaire pour la version desktop ou refaire un flex dimensionné en media queries à voir plus tard
             align-items: center;
             padding-bottom:5px;

@@ -88,6 +88,7 @@ a {
 .Fonction {
   display: flex;
   flex-direction: column;
+  margin-right: 5px;
 }
 .Fonction-Button {
   display: flex;
@@ -107,7 +108,7 @@ a {
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   padding: 5px;
   font-size: 12px;
 }
@@ -148,7 +149,7 @@ a {
   position: absolute;
   display: flex;
   top: 5%;
-  left: 80%;
+  left: 70%;
 }
 .Restaurant-Card img {
   width: 100%;
@@ -179,11 +180,7 @@ a {
   padding-bottom: 25px;
 }
 .footer-a-decoration {
-  flex: 10;
   color: white;
-}
-.footer-fa {
-  flex: 1;
 }
 .footer-title {
   font-family: "shrikhand";
@@ -199,6 +196,7 @@ a {
 }
 .footer-list_text {
   display: flex;
+  gap: 10px;
   align-items: center;
   padding-bottom: 5px;
   font-weight: bold;
@@ -475,14 +473,6 @@ main {
     width: 100%;
     align-items: center;
   }
-  .Restaurant-Title {
-    padding-left: 60px;
-  }
-  .Restaurant-Card {
-    width: 44%;
-    box-sizing: border-box;
-    justify-content: center;
-  }
   .Restaurant {
     display: flex;
     flex-direction: row;
@@ -491,17 +481,26 @@ main {
     gap: 5%;
     padding-left: 50px;
   }
+  .Restaurant-Title {
+    padding-left: 60px;
+  }
+  .Restaurant-Card {
+    width: 44%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
 }
 @media only screen and (min-width: 1040px) {
   #Fonction {
     padding-left: 120px;
+    padding-right: 220px;
   }
   .Fonction {
     flex-direction: row;
-    justify-content: left;
+    justify-content: space-between;
   }
   .Fonction-Button__choice {
-    width: 300px;
+    width: 275px;
   }
   .Restaurant {
     padding-left: 135px;
@@ -531,10 +530,11 @@ main {
     justify-content: right;
   }
   .footer-list_text {
-    width: 25%;
+    gap: 5px;
+    padding-right: 20px;
   }
   .footer-list_text-small {
-    padding-right: 20px;
+    padding-left: 20px;
   }
   .presentation-restaurant_menu {
     margin-left: 200px;

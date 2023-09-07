@@ -7,15 +7,6 @@
         width:100%;
         align-items: center;
     }
-    .Restaurant-Title {
-        padding-left:60px;
-    }
-    .Restaurant-Card{
-       width:44%;
-       box-sizing: border-box;
-       justify-content: center;
-
-    }
     .Restaurant {
         display:flex;
         flex-direction: row;
@@ -23,8 +14,15 @@
         justify-content: flex-start;
         gap:5%;
         padding-left:50px;
+        &-Title {
+            padding-left:60px;
+        }
+        &-Card {
+        width:44%;
+        box-sizing: border-box;
+        justify-content: center;    
+        }
     }
-
 
 
       ////////////////////////// Restaurant //////////////////////////
@@ -37,13 +35,14 @@
    
     #Fonction {
         padding-left:120px;
+        padding-right:220px;
     }
     .Fonction {
         flex-direction:row;
-        justify-content: left;
-    }
-    .Fonction-Button__choice {
-        width:300px;
+        justify-content: space-between;
+        &-Button__choice {
+        width:275px;
+        }
     }
     .Restaurant {
         padding-left:135px;
@@ -71,12 +70,12 @@
             width:100%;
             justify-content: right;
             &_text {
-                width:25%;
+                gap:5px;
+                padding-right:20px;
                 &-small {
-                    padding-right:20px;
+                    padding-left:20px;
                 }
             }
-            
         }
     }
 
