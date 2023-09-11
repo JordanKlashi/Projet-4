@@ -1,79 +1,91 @@
 @media only screen and (min-width: 768px) {
-    
 
-    
-    
+
+
+
     .Presentation {
-        width:100%;
+        width: 100%;
         align-items: center;
     }
+
     .Restaurant {
-        display:flex;
+        display: flex;
         flex-direction: row;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         justify-content: flex-start;
-        gap:5%;
-        padding-left:50px;
+        gap: 5%;
+        padding-left: 50px;
+
         &-Title {
-            padding-left:60px;
+            padding-left: 60px;
         }
+
         &-Card {
-        width:44%;
-        box-sizing: border-box;
-        justify-content: center;    
+            width: 44%;
+            box-sizing: border-box;
+            justify-content: center;
         }
     }
 
 
-      ////////////////////////// Restaurant //////////////////////////
-   
+    ////////////////////////// Restaurant //////////////////////////
 
-      
+
+
 }
 
-@media only screen and (min-width:1040px)  {
-   
+@media only screen and (min-width:1040px) {
+
     #Fonction {
-        padding-left:120px;
-        padding-right:220px;
+        padding-left: 120px;
+        padding-right: 220px;
     }
+
     .Fonction {
-        flex-direction:row;
+        flex-direction: row;
         justify-content: space-between;
+
         &-Button__choice {
-        width:275px;
+            width: 275px;
         }
     }
+
     .Restaurant {
-        padding-left:135px;
-        padding-right:135px;
+        padding-left: 135px;
+        padding-right: 135px;
+
         &-Title {
-            padding-left:145px;
+            padding-left: 145px;
         }
     }
+
     .footer {
-        display:flex;
+        display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        padding-top:30px;
-        width:100%;
+        padding-top: 30px;
+        width: 100%;
         justify-content: flex-end;
-        gap:60px;
+        gap: 60px;
+
         &-title {
-            padding-right:60px;
-            padding-bottom:35px;
-            padding-left:35px;
+            padding-right: 60px;
+            padding-bottom: 35px;
+            padding-left: 35px;
         }
+
         &-list {
-            display:flex;
+            display: flex;
             flex-direction: row;
-            width:100%;
+            width: 100%;
             justify-content: right;
+
             &_text {
-                gap:5px;
-                padding-right:20px;
+                gap: 5px;
+                padding-right: 20px;
+
                 &-small {
-                    padding-left:20px;
+                    padding-left: 20px;
                 }
             }
         }
@@ -83,15 +95,9 @@
     ////////////////////////// Restaurant //////////////////////////
 
     .presentation-restaurant_menu {
-        margin-left:200px;
-        margin-right:200px;
-        padding-left:55px;
-        padding-right:55px;
-        &_soustitre {
-            padding-left:55px;
-        }
-        &_soustitre::after{
-            left:55px;
-        }
+        margin-left: 200px;
+        margin-right: 200px;
+        padding-left: 55px;
+        padding-right: 55px;
     }
 }
