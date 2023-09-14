@@ -196,29 +196,37 @@
 }
 
 // Menu Appears
+// add translate y for better animation
+
 
 @keyframes Menu {
   0% {
     opacity: 0;
   }
-
+  50% {
+    transform: translateY(0);
+  }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .ENTREES {
   opacity: 0;
+  transform:translateY(-200px);
   animation: Menu 2s ease-in-out 1s forwards;
 }
 
 .PLATS {
   opacity: 0;
+  transform:translateY(-200px);
   animation: Menu 3s ease-in-out 2s forwards;
 }
 
 .DESSERTS {
   opacity: 0;
+  transform:translateY(-200px);
   animation: Menu 4s ease-in-out 3s forwards;
 }
 
