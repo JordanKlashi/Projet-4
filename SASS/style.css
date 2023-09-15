@@ -54,7 +54,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   padding: 10px;
   box-shadow: inset 2px 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
@@ -72,7 +72,7 @@ a {
 }
 .Order-Menu__Button {
   border-radius: 25px;
-  background: linear-gradient(to bottom, #ff79da, #9356DC);
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   width: 200px;
   height: 45px;
   color: white;
@@ -98,7 +98,7 @@ a {
 }
 .Fonction-Button__Number {
   border-radius: 50px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   padding: 4px 9px;
   transform: translateX(12px);
@@ -116,7 +116,7 @@ a {
   padding: 25px;
 }
 .Fonction-Button_fa_color {
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 
 .Presentation p,
@@ -145,7 +145,7 @@ h4 {
 .Restaurant-Card_Nouveau {
   font-weight: bold;
   padding: 5px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #278870;
   position: absolute;
   display: flex;
@@ -171,7 +171,7 @@ h4 {
   margin-right: 30px;
 }
 .Restaurant-Card_Fa_animation i {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .footer {
@@ -307,6 +307,7 @@ p {
   padding: 0;
   padding-bottom: 5px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .boutton_commande {
@@ -342,7 +343,7 @@ p {
 .loading-bar {
   width: 80%;
   height: 33px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: fixed;
   top: 0;
   left: 0;
@@ -361,8 +362,10 @@ p {
 }
 .loading-txt {
   margin-bottom: 25px;
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-family: "shrikhand";
+  margin: 10px;
+  font-size: 3em;
+  font-weight: normal;
 }
 
 .loading .line-box {
@@ -376,7 +379,7 @@ p {
 .loading .line-box .line {
   height: 20px;
   border-radius: 20px;
-  background: linear-gradient(to bottom, #ff79da, #9356DC);
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   animation: loading-line 6s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
@@ -402,7 +405,7 @@ p {
   left: 0;
   width: 40px;
   height: 1px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 .presentation-restaurant_menu_commande {
@@ -418,7 +421,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   transform: scale(1);
   transition: width 1s ease-in-out, transform 1s ease-in-out;
 }
@@ -481,7 +484,7 @@ p {
 }
 
 .Fonction-Button__choice:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 @keyframes Menu {
@@ -498,19 +501,19 @@ p {
 }
 .ENTREES {
   opacity: 0;
-  transform: translateY(-200px);
+  transform: translateY(200px);
   animation: Menu 2s ease-in-out 1s forwards;
 }
 
 .PLATS {
   opacity: 0;
-  transform: translateY(-200px);
+  transform: translateY(200px);
   animation: Menu 3s ease-in-out 2s forwards;
 }
 
 .DESSERTS {
   opacity: 0;
-  transform: translateY(-200px);
+  transform: translateY(200px);
   animation: Menu 4s ease-in-out 3s forwards;
 }
 

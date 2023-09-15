@@ -1,9 +1,9 @@
-@mixin button { 
-        border-radius: 25px;
-        background: $linear-button;
-        width: 200px;
-        height: 45px;
-        color: white;
-        border: none;
-        margin: 20px;
+@mixin button {
+  border-radius: 25px;
+  background: $linear-button;
+  width: 200px;
+  height: 45px;
+  color: white;
+  border: none;
+  margin: 20px;
 }

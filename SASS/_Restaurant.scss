@@ -1,113 +1,113 @@
 .Header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    &_title {
-        font-family: 'shrikhand';
-        margin: 10px;
-        font-size: 2em;
-        font-weight: normal;
-        width: 100%;
-        text-align: center;
-    }
+  &_title {
+    font-family: "shrikhand";
+    margin: 10px;
+    font-size: 2em;
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+  }
 
-    &_Back {
-        position: absolute;
-        padding-left: 25px;
-    }
+  &_Back {
+    position: absolute;
+    padding-left: 25px;
+  }
 }
 
 main {
-    background-color: $White;
+  background-color: $White;
 }
 
 .presentation-restaurant_img img {
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
-    position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  position: relative;
 }
 
 .presentation-restaurant_menu {
-    border-radius: 25px 25px 0 0;
-    background-color: $backgroundcolorPrimary;
-    margin-top: -35px;
+  border-radius: 25px 25px 0 0;
+  background-color: $backgroundcolorPrimary;
+  margin-top: -35px;
+  position: relative;
+
+  &_Card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &_titreflex {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &_titre {
+    font-family: "shrikhand";
+    font-weight: normal;
+    font-size: 26px;
+    padding: 0;
+  }
+
+  &_soustitre {
+    font-size: 16px;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
     position: relative;
+    display: inline-block;
+    font-weight: unset;
+    margin-left: 7%;
+  }
 
-    &_Card {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+  &_commande {
+    border-radius: 25px;
+    padding: 10px;
+    width: 85%;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: $White;
+
+    &_symbole i {
+      color: $White;
     }
 
-    &_titreflex {
-        display: flex;
-        align-items: center;
-        padding: 25px;
-        justify-content: center;
-        gap: 30px;
+    &_descriptif {
+      display: flex;
+      justify-content: space-between;
+
+      &_txt {
+        font-size: 0.88em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &_prix {
+        font-weight: bold;
+        white-space: nowrap;
+      }
     }
-
-    &_titre {
-        font-family: 'shrikhand';
-        font-weight: normal;
-        font-size: 26px;
-        padding: 0;
-    }
-
-    &_soustitre {
-        font-size: 16px;
-        padding-top: 35px;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-        position: relative;
-        display: inline-block;
-        font-weight: unset;
-        margin-left:7%;
-    }
-
-    &_commande {
-        border-radius: 25px;
-        padding: 10px;
-        width: 85%;
-        justify-content: center;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        background-color: $White;
-
-        &_symbole i {
-            color: $White;
-        }
-
-        &_descriptif {
-            display: flex;
-            justify-content: space-between;
-
-            &_txt {
-                font-size: 0.88em;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-
-            &_prix {
-                font-weight: bold;
-                white-space: nowrap;
-            }
-        }
-    }
-
+  }
 }
 
 .presentation-restaurant_menu_commande h4,
 p {
-    padding: 0;
-    padding-bottom: 5px;
-    margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .boutton_commande {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }

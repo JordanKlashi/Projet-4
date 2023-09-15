@@ -51,8 +51,10 @@
 
   &-txt {
     margin-bottom: 25px;
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-family: "shrikhand";
+    margin: 10px;
+    font-size: 3em;
+    font-weight: normal;
   }
 }
 
@@ -167,7 +169,6 @@
   &:hover .Restaurant-Card_Fa_empty i {
     transform: scale(0);
     transition: transform 1000ms;
-
   }
 
   &:hover .Restaurant-Card_Fa_animation i {
@@ -188,7 +189,6 @@
   }
 }
 
-
 // Background color hover Fonction choice
 
 .Fonction-Button__choice:hover i {
@@ -197,7 +197,6 @@
 
 // Menu Appears
 // add translate y for better animation
-
 
 @keyframes Menu {
   0% {
@@ -214,23 +213,23 @@
 
 .ENTREES {
   opacity: 0;
-  transform:translateY(-200px);
+  transform: translateY(200px);
   animation: Menu 2s ease-in-out 1s forwards;
 }
 
 .PLATS {
   opacity: 0;
-  transform:translateY(-200px);
+  transform: translateY(200px);
   animation: Menu 3s ease-in-out 2s forwards;
 }
 
 .DESSERTS {
   opacity: 0;
-  transform:translateY(-200px);
+  transform: translateY(200px);
   animation: Menu 4s ease-in-out 3s forwards;
 }
 
-// width button hover 
+// width button hover
 
 .Order-Menu__Button:hover {
   background: linear-gradient(to bottom, #ff94e8, #ad81e7);
