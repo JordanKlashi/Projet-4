@@ -47,7 +47,7 @@
   margin-bottom: 25px;
   font-family: "shrikhand";
   margin: 10px;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: normal;
 }
 
@@ -138,7 +138,10 @@
   transition: transform 1s ease-in-out;
 }
 .presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_descriptif_txt {
-  max-width: 70%;
+  max-width: 65%;
+}
+.presentation-restaurant_menu_commande:hover .presentation-restaurant_menu_commande_plat {
+  max-width: 80%;
 }
 
 .Restaurant-Card_Fa {
@@ -245,6 +248,9 @@ h3 {
 h4 {
   margin: 0;
   padding: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 p {
@@ -452,6 +458,9 @@ main {
   background-color: #f6f6f6;
   margin-top: -35px;
   position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .presentation-restaurant_menu_Card {
   display: flex;
@@ -490,6 +499,9 @@ main {
   justify-content: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .presentation-restaurant_menu_commande_symbole i {
   color: white;
@@ -514,7 +526,6 @@ p {
   padding: 0;
   padding-bottom: 5px;
   margin: 0;
-  white-space: nowrap;
 }
 
 .boutton_commande {
@@ -545,6 +556,9 @@ p {
   }
 }
 @media only screen and (min-width: 1040px) {
+  .loading-txt {
+    font-size: 3em;
+  }
   #Fonction {
     padding-left: 120px;
     padding-right: 220px;
