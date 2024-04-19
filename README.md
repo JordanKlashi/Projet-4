@@ -24,7 +24,7 @@
 
 <h3>Installation</h3>
 
-    Clonez le dépôt : git clone [lien vers votre dépôt]
+    Clonez le dépôt : git clone
     Assurez-vous d'avoir un environnement de développement configuré pour Sass.
     Exécutez la commande Sass pour compiler vos fichiers SCSS en CSS : sass input.scss output.css
     Ouvrez les fichiers HTML dans votre navigateur pour visualiser l'interface mobile avec les animations.
